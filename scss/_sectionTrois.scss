@@ -1,0 +1,36 @@
+.sectionTrois {
+    height: 150px;
+
+
+
+    p {
+        text-align: center;
+        font-weight: 700;
+    }
+
+}
+
+.carousel-inner {
+    height: 200px;
+
+    .carousel-item {
+        background: linear-gradient(to right, var(--braun), var(--orange));
+        padding: 1rem 1rem 2rem 3rem;
+    }
+
+    .carousel-item ul li {
+        margin: 0.2rem 0 0.4rem 0;
+
+    }
+
+
+
+}
+
+.carousel-control-prev {
+    justify-content: left;
+}
+
+.carousel-control-next {
+    justify-content: right;
+}

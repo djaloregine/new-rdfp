@@ -1,0 +1,119 @@
+.title--afdas {
+    background: linear-gradient(to right, var(--prune), var(--yellow));
+    box-shadow: -1em 0 .4em var(--prune), -1em 0 .4em var(--yellow);
+    padding: 2rem 0 3rem 0;
+
+    &--contenu {
+        font-size: 0.8rem;
+        color: var(--yellow);
+        text-align: center;
+    }
+}
+
+.title--afest {
+    background: linear-gradient(to right, var(--yellowBraun), var(--yellow));
+    box-shadow: -1em 0 .4em var(--yellow), -1em 0 .4em var(--yellowBraun);
+    padding: 2rem 0 3rem 0;
+
+    .title-h1 {
+        color: var(--fontBraun);
+    }
+
+    &--contenu {
+        font-size: 1.2rem;
+        color: var(--fontBraun);
+        text-align: center;
+        font-weight: 700;
+    }
+}
+
+.positionnement {
+    margin: 2rem 0;
+}
+
+.prune {
+    color: var(--prune);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.afdasList {
+    margin: 0 0.5rem;
+
+    li {
+        margin: 1rem 0 1rem 2rem;
+    }
+}
+
+.regine {
+    color: #f96a08;
+    font-weight: 700;
+}
+
+.afdas--logos {
+    background-color: var(--braun);
+    display: grid;
+    grid-template-columns: 20% 30% 25% 25%;
+    margin: 30px 0 50px 0;
+    padding: 0;
+
+    .afdas--logo {
+        padding: 0 10px 0 45px;
+    }
+
+    .afdas--logo--min {
+        width: 120px;
+    }
+
+
+}
+
+/* afest */
+#afest {
+    margin: 2rem 0;
+    padding: 0;
+
+    li {
+        margin: 0 0 0 1rem;
+    }
+
+    .photo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .yellowBraun {
+        color: var(--yellowBraun);
+        font-size: 1.2rem;
+    }
+
+    .alignCenter {
+        text-align: center;
+    }
+
+    i {
+        margin: 0 1rem 0 0;
+
+    }
+
+    .gras {
+        font-weight: 700;
+    }
+
+    .borderOrange {
+        border: 3px solid var(--orange);
+        border-radius: 25%;
+        margin: 1rem 0;
+    }
+
+    .borderPrune {
+        border: 3px solid var(--prune);
+        border-radius: 25%;
+        margin: 1rem 0;
+    }
+
+    .droite {
+        margin-left: 33%;
+    }
+}

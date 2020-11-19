@@ -1,0 +1,38 @@
+.classVeille {
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem 0;
+}
+
+.veille {
+    text-align: center;
+    padding: 1rem 0;
+    font-weight: 700;
+}
+
+#France,
+#Senegal {
+    font-weight: 700;
+}
+
+.formation,
+.art {
+    font-weight: 400;
+}
+
+li>i .fas .fa-plus-circle {
+    color: #9d5200;
+
+    &:hover {
+        color: #f96a08;
+    }
+}
+
+.noir {
+    color: #9d5200;
+
+    &:hover {
+        color: #f96a08;
+        text-decoration: none;
+    }
+}

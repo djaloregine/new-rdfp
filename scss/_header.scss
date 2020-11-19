@@ -1,0 +1,84 @@
+#barre {
+    background-image: url(../images/SergeyPesterev-min.jpeg);
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    transform: translateX(0%);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .imageAvatar {
+        width: 140%;
+        border-radius: 50%;
+        margin: 2rem 0 4rem 0;
+    }
+
+    a {
+        display: flex;
+        justify-content: center;
+    }
+
+    .logo {
+        background-image: url("../logo/logoVert.png");
+        filter: drop-shadow(1px 1px 4px rgba(255, 255, 255, .8));
+        width: 50%;
+        height: 200px;
+        width: 200px;
+
+        &:hover {
+            background-color: #ce880f;
+        }
+    }
+}
+
+nav .menuBarre {
+    height: 50%;
+}
+
+footer .footerBarre {
+    height: 25%;
+}
+
+#menuBarre ul {
+    padding-left: 0;
+    padding-top: 50px;
+}
+
+.menuElt-actualites {
+    font-size: 1.1rem;
+    font-weight: bolder;
+}
+
+.menuElt {
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: bolder;
+
+}
+
+.menuElt:hover {
+    background-color: #ce880f;
+    background-size: auto 40px;
+}
+
+#menuBarre a {
+    color: #ffffff;
+    text-decoration-line: none;
+}

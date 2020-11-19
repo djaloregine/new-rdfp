@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.row {
+    margin: 0 0;
+}
+
+html {
+    font-size: 1rem;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2 {
+    margin: 2rem 0 2rem 0;
+    word-spacing: 0.5rem;
+    text-align: center;
+}
+
+h3,
+h4,
+h5,
+h6 {
+    margin: 0rem 0 1.2rem 0;
+    word-spacing: 0.5rem;
+}
+
+h1 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+    color: #fbad27;
+}
+
+h2 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+    color: #6d4e19;
+    border: 1.5px solid #fbad27;
+}
+
+h3 {
+    font-size: 1.5rem;
+    line-height: 1.6rem;
+    font-weight: 500;
+    color: #fbad27;
+}
+
+h4 {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    color: #f96a08;
+    margin: 1rem 0 0 0;
+}
+
+h7 {
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+    word-spacing: 0.5rem;
+
+    .title--actu {
+        visibility: hidden;
+    }
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+p {
+    margin: 1rem 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+%fa,
+%fas {
+    font-weight: 900;
+    color: #fbad27;
+}
+
+.centrage {
+    padding-right: 0;
+}

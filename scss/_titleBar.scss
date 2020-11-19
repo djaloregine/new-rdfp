@@ -1,0 +1,32 @@
+#titleBar {
+    position: fixed;
+    visibility: hidden;
+    left: 0;
+    top: 0;
+    width: 102%;
+    z-index: 100;
+    display: flex;
+    flex-direction: row;
+    background: black;
+    height: 8vh;
+
+    .rd {
+        color: white;
+        font-weight: 700;
+        margin-top: 1vh;
+        font-size: 1.5rem;
+        margin-left: 20px;
+    }
+
+    span {
+        @extend %fa;
+        position: absolute;
+        cursor: pointer;
+        width: 50px;
+        text-align: center;
+        padding: 9px 10px;
+        color: white;
+        top: 0;
+        right: 0;
+    }
+}
