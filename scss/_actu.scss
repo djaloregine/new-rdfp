@@ -1,7 +1,8 @@
 .title--afdas {
     background: linear-gradient(to right, var(--prune), var(--yellow));
     box-shadow: -1em 0 .4em var(--prune), -1em 0 .4em var(--yellow);
-    padding: 2rem 0 3rem 0;
+    padding: 1rem 0 3rem 0;
+    border-radius: 3px;
 
     &--contenu {
         font-size: 0.8rem;
@@ -14,6 +15,7 @@
     background: linear-gradient(to right, var(--yellowBraun), var(--yellow));
     box-shadow: -1em 0 .4em var(--yellow), -1em 0 .4em var(--yellowBraun);
     padding: 2rem 0 3rem 0;
+    border-radius: 3px;
 
     .title-h1 {
         color: var(--fontBraun);
@@ -50,6 +52,13 @@
     font-weight: 700;
 }
 
+a:hover {
+    cursor: pointer;
+    color: var(--braun);
+    text-decoration: none;
+}
+
+
 .afdas--logos {
     background-color: var(--braun);
     display: grid;
@@ -58,7 +67,15 @@
     padding: 0;
 
     .afdas--logo {
-        padding: 0 10px 0 45px;
+        padding: 0 10px 0 5px;
+
+
+    }
+
+    .afdas--logo--afdas {
+        &:hover {
+            border: 5px solid #f96a08;
+        }
     }
 
     .afdas--logo--min {
@@ -75,6 +92,7 @@
 
     li {
         margin: 0 0 0 1rem;
+        padding: 0 1rem;
     }
 
     .photo {
@@ -115,5 +133,9 @@
 
     .droite {
         margin-left: 33%;
+
+        @include sm {
+            margin-left: 0;
+        }
     }
 }

@@ -1,19 +1,33 @@
 @import "generality";
 @import "variables";
 @import "header";
-@import "mixins";
-@import "media";
 @import "titleBar";
 @import "sectionTrois";
 @import "sectionQuatreVeille";
 @import "actu";
-@import "media-queries";
-
+@import "media";
 
 #page {
     min-height: 100vh;
-    margin: 0 15px;
+    margin: 0;
     background-color: #fffefc;
+}
+
+.container-fluid {
+    margin: 0 0 0 15px;
+    padding-left: 0;
+
+    @include sm {
+        padding-right: 0;
+        padding-left: 0;
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+
+.col-md-9 {
+    margin-top: 1rem;
 }
 
 .braun {
@@ -37,25 +51,21 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
+        border-radius: 3px;
 
     }
-
 
     .intro {
         padding: 0;
         font-weight: 700;
         margin: 0 0 0 1rem;
         color: #9d5200;
-
     }
 
     .textPrincipal {
         margin: 0 0 0 1rem;
     }
 }
-
-
-
 
 li .fa-angle-double-right {
     @extend %fas;
@@ -78,7 +88,6 @@ li .fa-angle-double-right {
         position: absolute;
         margin-left: -110px;
     }
-
 }
 
 .smart ul li {
@@ -90,7 +99,6 @@ li .fas {
 
 }
 
-
 /* footer */
 .colorLign {
     width: 100%;
@@ -100,7 +108,7 @@ li .fas {
 
 #contact {
     width: 100%;
-    margin: 0 0 3rem 1rem;
+    margin: 3rem 0 3rem 0;
     background-color: black;
     color: white;
 }
@@ -135,18 +143,9 @@ li .fas {
     margin: 0;
 }
 
-.reseaux {
-    display: flex;
-    padding: 0;
-    justify-content: center;
-
-    a {
-        color: #fbad27;
-        margin: 0.5rem 0.5rem;
-    }
-}
 
 /* foot de la partie principale de la page */
+
 #mentions:hover {
     color: #fbad27;
     cursor: pointer;
@@ -158,5 +157,3 @@ li .fas {
 }
 
 /* ouvrir sass avec npm run sass */
-
-/* test */

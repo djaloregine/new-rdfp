@@ -18,5 +18,13 @@ sans-serif;
     --background: #fffefc;
     --hint: #999;
     --border: #ddd;
-    
+}
+@mixin boxImage {
+    width: 140px;
+    height: 140px;
+    position: relative;
+
+    &:hover {
+        box-shadow: -12px 12px 5px 3px #fbad27;
+    }
 }

@@ -1,12 +1,15 @@
+@import "media";
+
 #barre {
+    margin-top: 10vh;
     background-image: url(../images/SergeyPesterev-min.jpeg);
     background-size: cover;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    overflow-y: auto;
     position: fixed;
+    overflow-y: auto;
     text-align: center;
     top: 0;
     right: 0;
@@ -14,6 +17,10 @@
     padding: 0;
     transform: translateX(0%);
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    @include sm {
+        visibility: hidden;
+    }
 }
 
 header {
@@ -25,7 +32,7 @@ header {
     .imageAvatar {
         width: 140%;
         border-radius: 50%;
-        margin: 2rem 0 4rem 0;
+        margin: 3rem 0 4rem 0;
     }
 
     a {
@@ -75,10 +82,30 @@ footer .footerBarre {
 
 .menuElt:hover {
     background-color: #ce880f;
-    background-size: auto 40px;
+    // background-size: auto 40px;
+    border-radius: 3px;
 }
 
 #menuBarre a {
     color: #ffffff;
     text-decoration-line: none;
+}
+  
+.reseaux {
+    display: flex;
+    padding: 0;
+    justify-content: center;
+
+    a {
+        color: #fbad27;
+        margin: 0.5rem 0.5rem;
+        font-size: 2rem;
+    }
+}
+
+
+.date {
+    color: #fbad27;
+    font-size: 0.5rem;
+    margin: 1rem 0;
 }

@@ -1,32 +1,53 @@
+@import "media";
+
 #titleBar {
-    position: fixed;
-    visibility: hidden;
-    left: 0;
-    top: 0;
-    width: 102%;
-    z-index: 100;
-    display: flex;
-    flex-direction: row;
-    background: black;
     height: 8vh;
+    background-color: var(--braun);
+    display: none;
+
+    @include sm {
+        display: block;
+        z-index: 100;
+        // width: 110%;
+    }
+
+    .titleBar {
+        max-height: 8vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
 
     .rd {
-        color: white;
+        color: var(--yellow);
         font-weight: 700;
         margin-top: 1vh;
         font-size: 1.5rem;
         margin-left: 20px;
     }
 
-    span {
-        @extend %fa;
-        position: absolute;
+    .fa-bars {
+        font-size: 2rem;
+        color: var(--yellow);
+        font-weight: 900;
         cursor: pointer;
-        width: 50px;
-        text-align: center;
-        padding: 9px 10px;
-        color: white;
-        top: 0;
-        right: 0;
+        line-height: 1.8rem;
+    }
+}
+
+.menuLittleScreen {
+    border: 1px solid var(--braun);
+    background-color: white;
+    box-shadow: -1em 0 .4em var(--fontBraun), -1em 0 .4em var(--braun);
+    margin: 22rem 0 0 0;
+    z-index: 100;
+
+    li {
+        margin: 1rem 0;
+    }
+
+    a {
+        color: var(--yellow)
     }
 }

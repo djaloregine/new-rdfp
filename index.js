@@ -1,48 +1,83 @@
 let hamburgerElt = document.querySelector(".fa-bars");
-let barreTitre = document.getElementById("titleBar");
-let barreMenu = document.getElementById("barre");
-let hauteurContainerPrincipal = document.querySelector(".containerPrincipal");
-let menuOuvert = true;
+let isMenuLS = false;
+let contentMenuLSDom;
 
-
-const visibilite = () => {
-    barreTitre.style.visibility = "hidden";
-    if (screen.width <= 767) {
-        barreTitre.style.visibility = "visible";
-        hauteurContainerPrincipal.style.marginTop = "8vh";
+const createMenuLSDom = () => {
+    const menuLSDom = () => {
+        contentMenuLSDom = document.createElement("ul");
+        contentMenuLSDom.style.display = "none";
+        contentMenuLSDom.style.position = "absolute";
+        contentMenuLSDom.classList.add("menuLittleScreen");
+        contentMenuLSDom.innerHTML = `
+        <li><a href="index.html"> Home Page </a></li>
+        <li><a href="afdas.html"> Actualité / AFDAS </a></li>
+        <li><a href="afest.html"> Actualité / AFEST </a></li>
+        <li><a href="#accompagnements"> Interventions </a></li>
+        <li><a href="#sectionTrois"> Présentation </a></li>
+        <li><a href="#veille"> Veille </a></li>
+        <li><a href="#contact"> Contact </a></li>
+       `;
+        return contentMenuLSDom;
     }
-    hamburgerElt.addEventListener("click", function () {
-        menuOuvert = !menuOuvert;
-        if (menuOuvert) {
-            barreMenu.style.transform = 'translateX(0%)';
-        } else {
-            barreMenu.style.transform = 'translateX(100%)';
-        }
-    });
+    const lSDOM = document.querySelector('.titleBar');
+    lSDOM.append(menuLSDom());
 }
-document.addEventListener('DOMContentLoaded', (event) => {
-    visibilite();
+
+createMenuLSDom();
+const menuLS = hamburgerElt.addEventListener("click", (e) => {
+    let listMenu = document.querySelector(".menuLittleScreen");
+    if (isMenuLS) {
+        listMenu.style.display = "none ";
+    } else {
+        listMenu.style.display = "block ";
+    }
+    isMenuLS = !isMenuLS;
 })
 
-window.addEventListener("resize", (event) => {
-    visibilite();
-    console.log("test");
+document.querySelector("#page").addEventListener("click", (e) => {
+    let listMenu = document.querySelector(".menuLittleScreen");
+    if (isMenuLS) {
+        listMenu.style.display = "none ";
+        isMenuLS = !isMenuLS;
+    }
 })
 
-/* mentions obligatoires */
+function resize() {
+    let contactEspace = document.getElementById("contact");
+    if (screen.width < 768) {
+        contactEspace.style.maxHeight = "450px";
+    } else {
+        contactEspace.style.maxHeight = "250px";
+    }
+}
 
-let mentionsObligatoires = document.getElementById("mentions")
+window.addEventListener("resize", resize);
+
+let mentionsObligatoires = document.getElementById("mentions");
 let mentions = document.querySelector(".mentions");
 let contactEspace = document.getElementById("contact");
-contactEspace.style.maxHeight = "250px";
-mentions.style.visibility = "hidden"
+mentions.style.visibility = "hidden";
+resize();
+
+
 
 mentionsObligatoires.addEventListener("click", function () {
-    if (mentions.style.visibility == "hidden" || mentions.style.visibility == "") {
-        mentions.style.visibility = "visible";
-        contactEspace.style.maxHeight = "550px";
+    if (screen.width < 768) {
+        console.log(screen.width);
+        if (mentions.style.visibility == "hidden" || mentions.style.visibility == "") {
+            mentions.style.visibility = "visible";
+            contactEspace.style.maxHeight = "700px";
+        } else {
+            mentions.style.visibility = "hidden";
+            contactEspace.style.maxHeight = "450px";
+        }
     } else {
-        mentions.style.visibility = "hidden";
-        contactEspace.style.maxHeight = "200px";
+        if (mentions.style.visibility == "hidden" || mentions.style.visibility == "") {
+            mentions.style.visibility = "visible";
+            contactEspace.style.maxHeight = "600px";
+        } else {
+            mentions.style.visibility = "hidden";
+            contactEspace.style.maxHeight = "250px";
+        }
     }
 })

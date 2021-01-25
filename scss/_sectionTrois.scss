@@ -1,36 +1,49 @@
 .sectionTrois {
-    height: 150px;
-
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     p {
         text-align: center;
         font-weight: 700;
     }
-
 }
 
-.carousel-inner {
-    height: 200px;
+.carousel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, var(--braun), var(--orange));
+    padding: 1rem 1rem 2rem 3rem;
 
-    .carousel-item {
-        background: linear-gradient(to right, var(--braun), var(--orange));
-        padding: 1rem 1rem 2rem 3rem;
+    .carousel-inner {
+        max-width: 700px;
+        min-height: 300px;
+
+        .carousel-item ul {
+            margin: 0.5rem 0 0 0;
+        }
+
+        .carousel-item ul li {
+            margin: 0.2rem 0 0.2rem 0;
+        }
     }
 
-    .carousel-item ul li {
-        margin: 0.2rem 0 0.4rem 0;
-
+    .exp {
+        padding-bottom: 0.8rem;
     }
 
+    .res li {
+        padding: 0.2rem;
+    }
 
+    .carousel-control-prev {
+        justify-content: left;
+    }
 
-}
-
-.carousel-control-prev {
-    justify-content: left;
-}
-
-.carousel-control-next {
-    justify-content: right;
+    .carousel-control-next {
+        margin-left: 30px;
+    }
 }
