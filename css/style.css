@@ -133,14 +133,8 @@ header {
   header a {
     display: flex;
     justify-content: center; }
-  header .logo {
-    background-image: url("../logo/logoVert.png");
-    filter: drop-shadow(1px 1px 4px rgba(255, 255, 255, 0.8));
-    width: 50%;
-    height: 200px;
-    width: 200px; }
-    header .logo:hover {
-      background-color: #ce880f; }
+  header .logo:hover {
+    background-color: #ce880f; }
 
 nav .menuBarre {
   height: 50%; }
